@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegalLine — Главная</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Legal<span>Line</span></div>
+    <nav class="nav">
+      <a href="index.html" class="active">Главная</a>
+      <a href="/pages/about.html">О специалисте</a>
+      <a href="/pages/services.html">Юридические услуги</a>
+      <a href="/pages/contacts.html">Контакты</a>
+      <a href="/pages/question.html">Задать вопрос</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="banner banner-top">
+      <div class="banner-overlay">
+        <h1>Юридические услуги</h1>
+        <p>Комплексное сопровождение юридических вопросов для бизнеса и частных лиц.</p>
+      </div>
+    </section>
+
+    <section class="slider-section">
+      <h2 class="section-title">Мои гарантии</h2>
+      <div class="slider">
+        <button class="slider-btn prev" aria-label="Предыдущий слайд">&#10094;</button>
+
+        <div class="slider-viewport">
+          <div class="slide active" data-index="0">
+            <img src="images/1.jpeg" alt="Гарантия конфиденциальности" />
+            <div class="slide-caption">
+              <h3>Конфиденциальность</h3>
+              <p>Все переданные данные строго защищены и не передаются третьим лицам.</p>
+            </div>
+          </div>
+          <div class="slide" data-index="1">
+            <img src="images/2.jpeg" alt="Гарантия прозрачной стоимости" />
+            <div class="slide-caption">
+              <h3>Прозрачная стоимость</h3>
+              <p>Фиксированные условия сотрудничества без скрытых платежей.</p>
+            </div>
+          </div>
+          <div class="slide" data-index="2">
+            <img src="images/3.jpeg" alt="Гарантия профессионального подхода" />
+            <div class="slide-caption">
+              <h3>Профессиональный подход</h3>
+              <p>Практический опыт и актуальные знания законодательства.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-btn next" aria-label="Следующий слайд">&#10095;</button>
+      </div>
+
+      <div class="slider-dots" role="tablist" aria-label="Индикация слайдов">
+        <button class="dot active" data-slide="0" aria-label="Слайд 1"></button>
+        <button class="dot" data-slide="1" aria-label="Слайд 2"></button>
+        <button class="dot" data-slide="2" aria-label="Слайд 3"></button>
+      </div>
+    </section>
+
+    <section class="banner banner-bottom">
+      <div class="banner-overlay">
+        <h2>Юридическая консультация</h2>
+        <p>Получите первичную консультацию и оценку перспектив вашего дела.</p>
+        <a href="/pages/question.html" class="btn-primary">Записаться на консультацию</a>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-contacts">
+            <h3>Контактная информация</h3>
+            <p><strong>Телефон:</strong>
+                <a href="tel:+79267100712">+7 (926) 710-07-12</a>
+            </p>
+            <p><strong>Email:</strong>
+                <a href="mailto:igor_shevtsov@mail.ru">igor_shevtsov@mail.ru</a>
+            </p>
+            <p><strong>Адрес:</strong>
+                Улица Красная Слободка, 47, деревня Гольёво, городской округ Красногорск, Московская область
+            </p>
+            <p><strong>График работы:</strong> 10:00–18:00</p>
+        </div>
+    </div>
+
+    <div class="footer-map-full">
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=37.307182%2C55.801620&mode=search&sctx=ZAAAAAgBEAAaKAoSCSMw1jcwX0JAEe6wicxc7ktAEhIJj3IwmwDDvj8RHTwTmiSWpD8iBgABAgMEBSgKOABAxZcHSAFiOnJlYXJyPXNjaGVtZV9Mb2NhbC9HZW8vQWR2ZXJ0cy9FbmFibGVEaXJlY3RCYW5uZXJSZXF1ZXN0PTFqAnJ1nQHNzMw9oAEAqAEAvQEu1zM7wgEFr8rjjASCAgrQvdC40YHQvtC9igIAkgIAmgIMZGVza3RvcC1tYXBz&sll=37.307182%2C55.801620&source=mapframe&sspn=0.003246%2C0.001088&text=%D0%BD%D0%B8%D1%81%D0%BE%D0%BD&um=constructor%3A89e645dd40427fa9982f9b2585fa1313b6df1f9974cbea72d23b7123327762dd&utm_source=mapframe&whatshere%5Bpoint%5D=37.307508%2C55.801730&whatshere%5Bzoom%5D=17&z=19.21"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="footer-bottom">
+        © LegalLine, 2025. Все права защищены.
+    </div>
+</footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

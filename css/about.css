@@ -1,0 +1,409 @@
+:root {
+  --bg-main: #f5f7fa;
+  --primary: #16324f;
+  --accent: #e9a63a;
+  --text-main: #111827;
+  --muted: #6b7280;
+  --white: #ffffff;
+  --border-soft: #d1d5db;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #eef2ff 0, #f5f7fa 40%, #e5e7eb 100%);
+  color: var(--text-main);
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav a:hover {
+  color: var(--text-main);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a.active {
+  color: #111827;
+}
+
+.nav a.active::after {
+  width: 100%;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.about-banner {
+    margin-left: 365px;
+    width: 450px;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/about_photo.jpg");
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+    position: relative;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 8px;
+    background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0));
+    color: white;
+    border-radius: 0 0 16px 16px;
+}
+
+.banner-overlay h1 {
+    margin-left: 15px;
+    font-size: 22px;
+}
+.banner-overlay p {
+    margin-left: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.bio {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bio h2 {
+    color: #16324f;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.achievements {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 32px;
+}
+
+.achievements h2 {
+    color: #16324f;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.1);
+}
+
+.slider-viewport {
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s ease;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #16324f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev { left: -35px; }
+.next { right: -35px; }
+
+.slider-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #16324f;
+}
+
+
+.quote {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 32px;
+}
+
+.quote blockquote {
+    font-size: 26px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: #16324f;
+    margin: 0;
+}
+
+.cta {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 32px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #e9a63a;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #d58f26;
+}
+
+.service-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.footer {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 32px;
+}
+
+.footer a {
+  color: #f59e0b;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-map-full {
+  width: 100%;
+  height: 360px;
+}
+
+.footer-map-full iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  color: #9ca3af;
+  background: #0f172a;
+}
+
+
+@media (max-width: 960px) {
+
+  .header {
+    flex-direction: column;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .nav {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-banner {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 300px;
+    height: 300px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 22px;
+  }
+
+  .bio, .achievements, .quote, .cta {
+    width: 90%;
+    padding: 0;
+  }
+
+  .slide {
+    font-size: 16px;
+  }
+
+  .footer-container {
+    padding: 36px 24px;
+  }
+
+  .footer-contacts h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-map-full {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .banner {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-banner {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 240px;
+    height: 240px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 18px;
+  }
+
+  blockquote {
+    font-size: 20px;
+  }
+
+  .prev { left: -20px; }
+  .next { right: -20px; }
+
+  .footer-container {
+    padding: 32px 20px;
+  }
+
+  .footer-map-full {
+    height: 260px;
+  }
+
+  .footer-contacts p {
+    font-size: 13px;
+  }
+}
